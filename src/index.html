@@ -3,10 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="vite.svg" />
+    <link rel="stylesheet" href="./styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Contacts</title>
   </head>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
   <body>
+    <div class="container">
+      <h2>Add new contact</h2>
+      <form class="form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name..."
+            class="section-input"
+          />
+          <small class="error-message">Name is required</small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input
+            type="text"
+            name="phone"
+            id="phone-number"
+            placeholder="Enter your phone-number..."
+            class="section-input"
+          />
+          <small class="error-message">Phone number is required</small>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Description</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Enter your description..."
+            class="section-input"
+          />
+          <small class="error-message">Description is required</small>
+        </div>
+
+        <div class="form-group">
+          <label for="photo">Photo</label>
+          <input
+            type="file"
+            name="photo"
+            id="photo"
+            accept="image/*"
+            class="section-input"
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="contacts-list"></div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
